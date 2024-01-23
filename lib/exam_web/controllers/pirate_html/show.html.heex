@@ -1,0 +1,16 @@
+<.header>
+  Pirate <%= @pirate.id %>
+  <:subtitle>This is a pirate record from your database.</:subtitle>
+  <:actions>
+    <.link href={~p"/pirates/#{@pirate}/edit"}>
+      <.button>Edit pirate</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<.list>
+  <:item title="Name"><%= @pirate.name %></:item>
+  <:item title="Bounty"><%= @pirate.bounty %></:item>
+</.list>
+
+<.back navigate={~p"/pirates"}>Back to pirates</.back>

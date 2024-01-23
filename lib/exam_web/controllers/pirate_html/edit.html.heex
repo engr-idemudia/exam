@@ -1,0 +1,8 @@
+<.header>
+  Edit Pirate <%= @pirate.id %>
+  <:subtitle>Use this form to manage pirate records in your database.</:subtitle>
+</.header>
+
+<.pirate_form changeset={@changeset} action={~p"/pirates/#{@pirate}"} />
+
+<.back navigate={~p"/pirates"}>Back to pirates</.back>

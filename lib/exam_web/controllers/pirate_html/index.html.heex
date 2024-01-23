@@ -1,0 +1,24 @@
+<.header>
+  Listing Pirates
+  <:actions>
+    <.link href={~p"/pirates/new"}>
+      <.button>New Pirate</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<.table id="pirates" rows={@pirates} row_click={&JS.navigate(~p"/pirates/#{&1}")}>
+  <:col :let={pirate} label="Name"><%= pirate.name %></:col>
+  <:col :let={pirate} label="Bounty"><%= pirate.bounty %></:col>
+  <:action :let={pirate}>
+    <div class="sr-only">
+      <.link navigate={~p"/pirates/#{pirate}"}>Show</.link>
+    </div>
+    <.link navigate={~p"/pirates/#{pirate}/edit"}>Edit</.link>
+  </:action>
+  <:action :let={pirate}>
+    <.link href={~p"/pirates/#{pirate}"} method="delete" data-confirm="Are you sure?">
+      Delete
+    </.link>
+  </:action>
+</.table>
