@@ -65,6 +65,8 @@ defmodule ExamWeb.Router do
 
     resources "/pirates", PirateController
     resources "/fruits", FruitController
+    get "/fruit-pirates", FruitPirateController, :index
+    post "/fruit-pirates", FruitPirateController, :update
 
     get "/users/settings", UserSettingsController, :edit
     put "/users/settings", UserSettingsController, :update

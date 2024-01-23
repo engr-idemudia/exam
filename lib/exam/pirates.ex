@@ -203,7 +203,7 @@ defmodule Exam.Pirates do
     pirate_fruits = Repo.all(build_pirate_and_fruit_query(fruit_pirate))
     case pirate_fruits do
       [] -> :can_eat
-      [fp] -> :cannot_eat
+      [_fp] -> :cannot_eat
     end
 
   end

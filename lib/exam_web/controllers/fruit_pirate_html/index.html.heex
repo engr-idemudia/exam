@@ -1,0 +1,14 @@
+<div class="mx-auto max-w-sm">
+  <.header>
+    Fruit Pirate
+  </.header>
+
+  <.simple_form :let={f} for={@changeset} action={~p"/fruit-pirates"}>
+    <.input field={f[:pirate]} type="text" label="Pirate Name" required />
+    <.input field={f[:fruit]} type="text" label="Fruit Name" required />
+
+    <:actions>
+      <.button class="w-full">Submit</.button>
+    </:actions>
+  </.simple_form>
+</div>

@@ -18,4 +18,19 @@ defmodule Exam.PiratesFixtures do
 
     pirate
   end
+
+  @doc """
+  Generate a fruit_pirate.
+  """
+  def fruit_pirate_fixture(attrs \\ %{}) do
+    {:ok, fruit_pirate} =
+      attrs
+      |> Enum.into(%{
+        fruit: "some fruit",
+        pirate: "some pirate"
+      })
+      |> Exam.Pirates.create_fruit_pirate()
+
+    fruit_pirate
+  end
 end
