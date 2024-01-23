@@ -1,0 +1,8 @@
+<.header>
+  Edit Fruit <%= @fruit.id %>
+  <:subtitle>Use this form to manage fruit records in your database.</:subtitle>
+</.header>
+
+<.fruit_form changeset={@changeset} action={~p"/fruits/#{@fruit}"} />
+
+<.back navigate={~p"/fruits"}>Back to fruits</.back>

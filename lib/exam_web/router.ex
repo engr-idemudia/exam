@@ -64,6 +64,7 @@ defmodule ExamWeb.Router do
     pipe_through [:browser, :require_authenticated_user]
 
     resources "/pirates", PirateController
+    resources "/fruits", FruitController
 
     get "/users/settings", UserSettingsController, :edit
     put "/users/settings", UserSettingsController, :update

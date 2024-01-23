@@ -1,0 +1,18 @@
+<.header>
+  Fruit <%= @fruit.id %>
+  <:subtitle>This is a fruit record from your database.</:subtitle>
+  <:actions>
+    <.link href={~p"/fruits/#{@fruit}/edit"}>
+      <.button>Edit fruit</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<.list>
+  <:item title="Name"><%= @fruit.name %></:item>
+  <:item title="Power"><%= @fruit.power %></:item>
+  <:item title="Type"><%= @fruit.type %></:item>
+  <:item title="Eaten"><%= @fruit.eaten %></:item>
+</.list>
+
+<.back navigate={~p"/fruits"}>Back to fruits</.back>
